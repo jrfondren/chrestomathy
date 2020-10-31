@@ -1,6 +1,6 @@
 # pwcheck
 These are D, Rust, and Nim implementations (performed in that order) of a
-program inteded to look for extremely weak passwords in Unix systems, not via
+program intended to look for extremely weak passwords in Unix systems, not via
 brute force but from the inside, reading the system's password hashes and
 calling crypt() appropriately against the list of passwords.
 
