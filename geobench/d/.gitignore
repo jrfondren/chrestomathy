@@ -1,0 +1,15 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/geobench
+geobench.so
+geobench.dylib
+geobench.dll
+geobench.a
+geobench.lib
+geobench-test-*
+*.exe
+*.o
+*.obj
+*.lst
