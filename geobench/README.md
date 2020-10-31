@@ -3,7 +3,7 @@ These are D, Rust, and Nim implementations (performed in that order)
 of a benchmark of MaxMindDB readers written in the respective
 languages. The benchmark's not that serious: the D library looks to be
 abandoned and can't be compiled as is on current releases (it needs an
-~import std.bitmanip~); the Nim library's written by me and all of
+`import std.bitmanip`); the Nim library's written by me and all of
 unpolished and very new and blocked on experimental features.
 
 The benchmark requires a copy of GeoLite2-Country.mmdb from maxmind.com
