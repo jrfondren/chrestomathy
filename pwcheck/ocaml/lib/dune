@@ -1,0 +1,23 @@
+(library
+ (name pwcheck)
+ (libraries crypt re))
+
+(rule
+ (target Known.ml)
+ (deps
+  (source_tree ../assets)
+  (source_tree ../tools))
+ (action
+  (with-stdout-to
+   %{target}
+   (progn
+    (run
+     ocaml
+     %{project_root}/tools/embed.ml
+     top25
+     %{project_root}/assets/top25.list)
+    (run
+     ocaml
+     %{project_root}/tools/embed.ml
+     top500
+     %{project_root}/assets/top500.list)))))
