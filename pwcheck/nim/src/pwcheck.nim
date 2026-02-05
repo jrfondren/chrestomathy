@@ -37,13 +37,13 @@ proc isWeak(hash: string): Weakness =
   # man 3 crypt
   elif hash.contains(hashre, matches):
     for pass in weak:
-      if hash == crypt(pass, matches[0]):
+      if hash == crypt(pass.cstring, matches[0].cstring):
         return Weakness(kind: WeakPass, pass: pass)
     return Weakness(kind: Ok)
   elif hash.len >= 2:
     let salt = hash[0 ..< 2]
     for pass in weak:
-      if hash == crypt(pass, salt):
+      if hash == crypt(pass.cstring, salt.cstring):
         return Weakness(kind: DESPass, pass: pass)
     return Weakness(kind: DES)
   else:
