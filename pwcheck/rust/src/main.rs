@@ -10,7 +10,7 @@ use std::io::BufRead;
 struct Assets;
 
 #[link(name = "crypt")]
-extern {
+extern "C" {
     fn crypt(key: *const c_char, salt: *const c_char) -> *const c_char;
 }
 
